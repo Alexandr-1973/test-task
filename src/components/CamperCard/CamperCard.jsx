@@ -1,3 +1,5 @@
+import ShowMoreButton from "../ShowMoreButton/ShowMoreButton";
+
 const CamperCard = () => {
   return (
     <div>
@@ -18,7 +20,8 @@ const CamperCard = () => {
         </div>
         <p>description</p>
         <ul>parametresList</ul>
-        <button>Show More</button>
+        {/* <button>Show More</button> */}
+        <ShowMoreButton />
       </div>
     </div>
   );

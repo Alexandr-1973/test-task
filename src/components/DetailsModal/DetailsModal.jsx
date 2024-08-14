@@ -1,7 +1,7 @@
 import Modal from "react-modal";
 import css from "./DetailsModal.module.css";
 
-const DetailsModal = ({ isOpen, onClose, modalFoto }) => {
+const DetailsModal = ({ isOpen, onClose }) => {
   return (
     <div className={css["modal-div"]}>
       <Modal
@@ -11,7 +11,7 @@ const DetailsModal = ({ isOpen, onClose, modalFoto }) => {
         onRequestClose={onClose}
         className={css.modal}
       >
-        <img src={modalFoto} className={css.img} />
+        <img src="" className={css.img} />
       </Modal>
     </div>
   );
