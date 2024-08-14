@@ -1,6 +1,9 @@
 import ShowMoreButton from "../ShowMoreButton/ShowMoreButton";
 
-const CamperCard = () => {
+const CamperCard = ({item}) => {
+
+
+  const {name, price, rating, reviews, location, description}=item;
   return (
     <div>
       <img
@@ -10,15 +13,15 @@ const CamperCard = () => {
       />
       <div>
         <div>
-          <h3>name</h3>
-          <p>price</p>
+          <h3>{name}</h3>
+          <p>{price}</p>
           <button>heartFavorite</button>
         </div>
         <div>
-          <p>raiting reviews</p>
-          <p>location</p>
+          <p>{rating}({reviews.length} reviews) </p>
+          <p>{location}</p>
         </div>
-        <p>description</p>
+        <p>{description}</p>
         <ul>parametresList</ul>
         {/* <button>Show More</button> */}
         <ShowMoreButton />

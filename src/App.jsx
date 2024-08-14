@@ -7,8 +7,19 @@ import HomePage from "./pages/HomePage/HomePage";
 import CatalogPage from "./pages/CatalogPage/CatalogPage";
 import FavoritePage from "./pages/FavoritePage/FavoritePage";
 import Navigation from "./components/Navigation/Navigation";
+// import { useDispatch } from "react-redux";
+// import { useEffect } from "react";
+// import { fetchCampers } from "./redux/campersFetchFunctions";
 
 function App() {
+
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(fetchCampers());
+  // }, []);
+
+
   return (
     <>
       <Navigation />
