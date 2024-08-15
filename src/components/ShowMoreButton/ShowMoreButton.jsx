@@ -1,21 +1,32 @@
 import { useState } from "react";
 import DetailsModal from "../DetailsModal/DetailsModal";
+import { fetchCamperById } from "../../redux/campersFetchFunctions";
 
+const ShowMoreButton = ({ id }) => {
+  const [camperValue, setCamperValue] = useState();
+  const [isModal, setIsModal] = useState(false);
 
-const ShowMoreButton=()=>{
+  const handleClick = async (id) => {
+    const camper = await fetchCamperById(id);
+    console.log(camper);
+    setCamperValue(camper);
+    setIsModal(true);
+  };
 
-	const [isModal, setIsModal] = useState(false);
+  const closeModal = () => {
+    setIsModal(false);
+  };
 
-	const closeModal = () => {
-		setIsModal(false);
-	  };
-
-	return(
-		<>
-		<button onClick={()=>{setIsModal(true)}}>Show more</button>
-		<DetailsModal isOpen={isModal} onClose={closeModal} />
-		</>
-	)
-}
+  return (
+    <>
+      <button onClick={() => handleClick(id)}>Show more</button>
+      <DetailsModal
+        isOpen={isModal}
+        onClose={closeModal}
+        camperValue={camperValue}
+      />
+    </>
+  );
+};
 
 export default ShowMoreButton;
