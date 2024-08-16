@@ -20,8 +20,9 @@ export const fetchCampers = createAsyncThunk(
     // ?l=4&p=${page}
 
     try {
-      const res = await axios.get(`/campers?l=4&p=${info.page}`, {
+      const res = await axios.get(`/campers?$count&l=4&p=${info.page}`, {
         params: {
+          
           ...info.filters,
         },
       });

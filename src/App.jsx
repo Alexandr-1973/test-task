@@ -11,7 +11,17 @@ import Navigation from "./components/Navigation/Navigation";
 // import { useEffect } from "react";
 // import { fetchCampers } from "./redux/campersFetchFunctions";
 
+// import { useDispatch } from "react-redux";
+// import { changeFilter } from "./redux/filtersSlice";
+// import { useEffect } from "react";
+
 function App() {
+
+  // const dispatch = useDispatch();
+
+  // useEffect(()=>{
+  //   dispatch(changeFilter({}));
+  // },[dispatch])
 
   // const dispatch = useDispatch();
 

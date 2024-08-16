@@ -1,4 +1,17 @@
+import { useDispatch } from "react-redux";
+import { changeFilter } from "../../redux/filtersSlice";
+import { useEffect } from "react";
+
+
+
 const HomePage = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch(changeFilter({}));
+  },[dispatch])
+
   return (
     <div>
       <div>

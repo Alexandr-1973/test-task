@@ -2,9 +2,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { filtersObject } from "../../utils/utils";
 import { changeFilter } from "../../redux/filtersSlice";
 import { filtersSelector } from "../../redux/filtersSlice";
-import { fetchCampers } from "../../redux/campersFetchFunctions";
+import { useEffect } from "react";
+// import { fetchCampers } from "../../redux/campersFetchFunctions";
 
-const Search = () => {
+const Search = ({setPage}) => {
   const dispatch = useDispatch();
   const a = useSelector(filtersSelector);
   console.log(a.filters);
@@ -13,8 +14,13 @@ const Search = () => {
 
   const radioButtonsArray = ["Van", "Fully Integrated", "Alcove"];
 
+  // useEffect(()=>{
+  //   dispatch(changeFilter({}));
+  // },[dispatch])
+
   const onSubmit = (e) => {
     e.preventDefault();
+    
     console.log("kuku");
 
     const formData = new FormData(e.target);
@@ -24,9 +30,10 @@ const Search = () => {
     const filtersArray = formData.getAll("formData");
 
     // console.log(filtersObject(filtersArray));
-    // dispatch(changeFilter(filtersObject(filtersArray)));
+    setPage(1);
+    dispatch(changeFilter(filtersObject(filtersArray)));
 
-    dispatch(fetchCampers({ page: 1, filters: filtersObject(filtersArray) }));
+    // dispatch(fetchCampers({ page: 1, filters: filtersObject(filtersArray) }));
   };
 
   return (

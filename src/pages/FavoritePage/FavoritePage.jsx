@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CamperCard from "../../components/CamperCard/CamperCard";
+import { useDispatch } from "react-redux";
+import { changeFilter } from "../../redux/filtersSlice";
 
 const FavoritePage = () => {
   const [favoriteCampers, setFavoriteCampers] = useState(() =>{
     return JSON.parse(localStorage.getItem("favoriteCampers"))}
   );
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch(changeFilter({}));
+  },[dispatch])
 
   console.log(favoriteCampers);
   

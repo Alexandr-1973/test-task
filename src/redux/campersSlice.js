@@ -2,7 +2,7 @@ import {
   createSlice,
   isFulfilled,
   // isPending,
-  // isRejected,
+  isRejected,
   // createSelector,
 } from "@reduxjs/toolkit";
 //   import { selectNameFilter } from "./filtersSlice";
@@ -10,7 +10,7 @@ import {
 const initialState = {
   items: [],
   // loading: false,
-  // error: null,
+  error: null,
 };
 
 const campersSlice = createSlice({
@@ -23,15 +23,16 @@ const campersSlice = createSlice({
       // })
       .addMatcher(isFulfilled, (state, action) => {
         //   state.loading = false;
-        //   state.error = null;
+          state.error = null;
         state.items = action.payload;
-      });
-    // .addMatcher(isRejected, (state, action) => {
-    //   state.loading = false;
-    //   state.error = action.payload;
-    // });
+      })
+    .addMatcher(isRejected, (state, action) => {
+      // state.loading = false;
+      state.error = action.payload;
+    })
   },
 });
 
 export const campersReducer = campersSlice.reducer;
 export const campersSelector = (state) => state.campers.items;
+export const selectError = (state) => state.campers.error;
