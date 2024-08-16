@@ -8,7 +8,6 @@ import { fetchCampers } from "../../redux/campersFetchFunctions";
 import { campersSelector } from "../../redux/campersSlice";
 
 const CatalogPage = () => {
-  
   const [page, setPage] = useState(1);
   const campersArray = useSelector(campersSelector);
   console.log(campersArray);
@@ -16,19 +15,14 @@ const CatalogPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCampers(page));
- 
-
+    dispatch(fetchCampers({ page, filters: {} }));
   }, [page, dispatch]);
 
   const handleClick = () => {
     if (campersArray.length === 4) {
       setPage(page + 1);
-    };
+    }
   };
-
-
-
 
   return (
     <>
@@ -48,7 +42,9 @@ const CatalogPage = () => {
         </ul>
         {/* <CamperCard />
       </div> */}
-        {campersArray.length===4 && <button onClick={handleClick}>Load more</button>}
+        {campersArray.length === 4 && (
+          <button onClick={handleClick}>Load more</button>
+        )}
       </div>
       {/* <DetailsModal isOpen={isModal} onClose={closeModal} modalFoto={modalFoto} /> */}
     </>

@@ -1,12 +1,17 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { filtersObject } from "../../utils/utils";
+import { changeFilter } from "../../redux/filtersSlice";
 import { filtersSelector } from "../../redux/filtersSlice";
+import { fetchCampers } from "../../redux/campersFetchFunctions";
 
 const Search = () => {
-  const checkBoxArray = Object.keys(useSelector(filtersSelector).equipment);
-  console.log(checkBoxArray);
-  // const checkBoxArray = [];
+  const dispatch = useDispatch();
+  const a = useSelector(filtersSelector);
+  console.log(a.filters);
 
-  const radioButtonsArray = Object.keys(useSelector(filtersSelector).type);
+  const checkBoxArray = ["AC", "Automatic", "Kitchen", "TV", "Shower/WC"];
+
+  const radioButtonsArray = ["Van", "Fully Integrated", "Alcove"];
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -18,66 +23,10 @@ const Search = () => {
 
     const filtersArray = formData.getAll("formData");
 
-    const filtersObject = (filtersArray) => {
-      let paramsObject = {
-        location: filtersArray[0],
-      };
+    // console.log(filtersObject(filtersArray));
+    // dispatch(changeFilter(filtersObject(filtersArray)));
 
-      for (let i = 1; i <= filtersArray.length - 1; i += 1) {
-        if (filtersArray[i] === "AC") {
-          paramsObject = {
-            AC: 1,
-            ...paramsObject,
-          };
-        }
-        if (filtersArray[i] === "Automatic") {
-          paramsObject = {
-            transmission: "automatic",
-            ...paramsObject,
-          };
-        }
-
-        if (filtersArray[i] === "Kitchen") {
-          paramsObject = {
-            kitchen: 1,
-            ...paramsObject,
-          };
-        }
-        if (filtersArray[i] === "TV") {
-          paramsObject = {
-            TV: 1,
-            ...paramsObject,
-          };
-        }
-        if (filtersArray[i] === "Shower/WC") {
-          paramsObject = {
-            shower: 1,
-            ...paramsObject,
-          };
-        }
-
-        if (filtersArray[i] === "Van") {
-          paramsObject = {
-            form: "panelTruck",
-            ...paramsObject,
-          };
-        }
-        if (filtersArray[i] === "Fully Integrated") {
-          paramsObject = {
-            form: "fullyIntegrated",
-            ...paramsObject,
-          };
-        }
-        if (filtersArray[i] === "Alcove") {
-          paramsObject = {
-            form: "alcove",
-            ...paramsObject,
-          };
-        }
-      }
-      return paramsObject;
-    };
-    console.log(filtersObject(filtersArray));
+    dispatch(fetchCampers({ page: 1, filters: filtersObject(filtersArray) }));
   };
 
   return (
