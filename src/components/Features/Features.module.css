@@ -1,0 +1,71 @@
+.genDiv {
+	width: 430px;
+	display: flex;
+	flex-direction: column;
+	/* gap: 44px; */
+}
+
+
+
+
+.elemLi {
+	border-radius: 100px;
+	padding: 12px 18px;
+	/* width: 126px; */
+	height: 44px;
+	background: #f2f4f7;
+	mix-blend-mode: multiply;
+  }
+  
+  .elemP {
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.25;
+	text-align: center;
+	color: #101828;
+	
+  }
+  .elemUl {
+	/* width: 430px; */
+/* height: 200px; */
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-bottom: 44px;
+  }
+
+  .table {
+	/* width: 430px; */
+	border-top: 1px solid rgba(16, 24, 40, 0.2);
+	padding-top: 24px;
+  }
+  .details {
+	font-family: "Inter", sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.2;
+	color: #101828;
+	margin-bottom: 24px;
+  }
+
+
+  .tableTr {
+	display: flex;
+	row-gap: 14px;
+	justify-content: space-between;
+	
+
+  }
+  .tableTd {
+
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.33333;
+	text-align: center;
+	color: #101828;
+
+
+
+  }

@@ -1,7 +1,156 @@
 .red {
-	background-color: red;
+  fill: red;
+  width: 24px;
+	height: 24px;
 }
 
 .white {
-	background-color: white;
+  fill: #fff;
+  width: 24px;
+	height: 24px;
+}
+
+.genDiv {
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+  height: 358px;
+  background: #fff;
+  display: flex;
+  gap: 24px;
+}
+
+.img {
+  border-radius: 10px;
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+}
+
+.textBlockDiv {
+  width: 526px;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.genTitleDiv {
+display: flex;
+flex-direction: column;
+/* justify-content: space-between; */
+gap: 8px;
+
+}
+
+.titleDiv {
+  width: 526px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-bottom: 8px; */
+}
+
+.priceDiv {
+  width: 158px;
+  height: 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* justify-content: space-between;  */
+
+
+
+
+
+}
+
+.reviewsDiv {
+  display: flex;
+  width: 267px;
+  height: 24px;
+  align-items: center;
+  gap: 36px;
+}
+
+.descriptionDiv {
+  height: 24px;
+}
+
+.description {
+  /* box-sizing: border-box;
+	height: 24px; */
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.elemUl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.elemLi {
+  border-radius: 100px;
+  padding: 12px 18px;
+  /* width: 126px; */
+  height: 44px;
+  background: #f2f4f7;
+  mix-blend-mode: multiply;
+}
+
+.elemP {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: #101828;
+}
+
+.title {
+	font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.25;
+color: #101828;
+}
+
+.reviewsText {
+	font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+color: #101828;
+}
+
+.reviewsLocation {
+	font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #101828;
+}
+
+.price {
+	font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.25;
+color: #101828;
+}
+
+.heartButton {
+	border: none;
+	background-color: inherit;
 }

@@ -40,8 +40,8 @@ const CatalogPage = () => {
         {/* render CamperCards */}
         {(error || campersArray.length === 0) && <p>Not found</p>}
         {!error && campersArray.length>0 &&
-        <div>
-        <ul>
+        <div className={css.cardDiv}>
+        <ul className={css.ulCard}>
           {campersArray.map((item) => {
             return (
               <li key={item._id}>
@@ -53,7 +53,7 @@ const CatalogPage = () => {
         {/* <CamperCard />
       </div> */}
         {campersArray.length === 4 && (
-          <button onClick={handleClick}>Load more</button>
+          <button className={css.moreButton} onClick={handleClick}>Load more</button>
         )}
 
 </div>}

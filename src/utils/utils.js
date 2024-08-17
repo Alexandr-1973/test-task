@@ -67,3 +67,60 @@ export const filtersObject = (filtersArray) => {
   }
   return paramsObject;
 };
+
+
+export const renderElemArray = (elem,item) => {
+  let array = [];
+  for (let i = 0; i < elem.length; i += 1) {
+    if (
+      Object.values(item).includes(elem[i]) ||
+      Object.values(item.details).includes(elem[i])
+    ) {
+      if (!array.includes(elem[i])) {
+        array.push(elem[i]);
+      }
+    }
+    if (Object.keys(item).includes(elem[i])) {
+      let check = true;
+      for (let j = 0; j < array.length; j += 1) {
+        if (array[j].includes(elem[i])) {
+          check = false;
+        }
+      }
+      if (check) {
+        if (Number(`${item[elem[i]]}`) > 0) {
+          array.push(`${item[elem[i]]} ${elem[i]}`);
+        }
+      }
+    }
+
+    if (Object.keys(item.details).includes(elem[i])) {
+      let check = true;
+      for (let k = 0; k < array.length; k += 1) {
+        if (array[k].includes(elem[i])) {
+          check = false;
+        }
+      }
+      if (check) {
+        if (Number(`${item.details[elem[i]]}`) > 0) {
+          array.push(`${item.details[elem[i]]} ${elem[i]}`);
+        }
+      }
+    }
+  }
+  return array;
+};
+
+export const tableValues = (elem, camperValue) => {
+  if (camperValue[elem] === "fullyIntegrated") {
+    return "Fully integrated";
+  }
+  if (camperValue[elem] === "panelTruck") {
+    return "Panel truck";
+  }
+
+  if (camperValue[elem] === "alcove") {
+    return "Alcove";
+  }
+  return camperValue[elem];
+};

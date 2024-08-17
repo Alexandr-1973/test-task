@@ -9,12 +9,14 @@
 .modal {
   margin-left: auto;
   margin-right: auto;
-  background-color: "lightgrey";
+  /* background-color: "lightgrey"; */
+  /* background-color: #fff; */
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* overflow: scroll; */
 }
 
 .overlay {
@@ -25,20 +27,153 @@
   height: 100%;
   display: flex;
   align-items: center;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
+  background-color: rgba(17, 18, 19, 0.4);
   overflow: auto;
   z-index: 1;
   opacity: 1;
 }
 
-.img {
-  width: 100%;
-  height: 100%;
+.genDiv {
+  border-radius: 20px;
+padding: 40px;
+width: 982px;
+/* height: 100%; */
+height: 720px;
+background-color: #fff;
+overflow: scroll;
+
+}
+
+.titleBlockDiv {
+  margin-bottom: 24px;
+}
+
+.titleDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.title {
+	font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.25;
+color: #101828;
+}
+
+.closeButton {
+  background-color: inherit;
   border: none;
 }
 
-.testdiv {
+.imgDiv {
+  margin-bottom: 24px;
+}
+
+.img {
+  width: 290px;
+  height: 310px;
+  border: none;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+
+/* .testdiv {
   width: 500px;
   height: 300px;
   background-color: green;
+} */
+
+.imgUl {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.imgLi {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0; */
+  
+}
+
+.reviewsDiv {
+  display: flex;
+  width: 267px;
+  height: 24px;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 16px;
+}
+
+.reviewsText {
+	font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+color: #101828;
+}
+
+.reviewsLocation {
+	font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #101828;
+}
+
+.price {
+	font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.25;
+color: #101828;
+}
+
+.descriptionP {
+  font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #475467;
+margin-bottom: 44px;
+}
+
+.togleUl {
+  display: flex;
+  height: 48px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.2);
+  align-items: flex-start;
+  /* width: 100%; */
+  gap: 40px;
+  margin-bottom: 44px;
+}
+
+
+
+.elemP {
+  font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 20px;
+line-height: 1.2;
+color: #101828;
+}
+
+.true {
+  
+height: 100%;
+  border-bottom: 3px solid red
+}
+
+.detailsDiv {
+  display: flex;
 }
