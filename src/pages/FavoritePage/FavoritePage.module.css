@@ -1,0 +1,32 @@
+.genUl {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	justify-content: center;
+	align-items: center;
+
+
+	/* margin-left: auto;
+	margin-right: auto; */
+}
+
+
+
+.genLi {
+	display: flex;
+	gap: 16px;
+}
+
+.deleteBtn {
+	border-radius: 20px;
+	font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  background-color: #fff;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: pointer;
+}

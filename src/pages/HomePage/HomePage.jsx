@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { changeFilter } from "../../redux/filtersSlice";
 import { useEffect } from "react";
+import css from "./HomePage.module.css"
 
 
 
@@ -13,15 +14,15 @@ const HomePage = () => {
   },[dispatch])
 
   return (
-    <div>
+    <div className={css.genDiv}>
       <div>
         <img
         //   src=
         //   alt="Actor's photo"
         //   className={css.img}
         />
-        <h2>Campervan and RV Rental</h2>
-        <p>
+        <h2 className={css.title}>Campervan and RV Rental</h2>
+        <p className={css.desP}>
           Campervanning is popular throughout the world! Our site is the perfect
           place to rent a campervan or RV and hit the road. The idea of the
           iconic road trips still attracts people from far and wide, all wanting
@@ -38,8 +39,8 @@ const HomePage = () => {
         //   alt="Actor's photo"
         //   className={css.img}
         />
-        <h2>Become a host</h2>
-        <p>
+        <h2 className={css.title}>Become a host</h2>
+        <p className={css.desP}>
           Have you considered earning money when you do not use your RV? List
           your vehicle for free and rent it out whenever you want to.
         </p>

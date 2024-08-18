@@ -1,0 +1,19 @@
+.title {
+	font-family: "Inter", sans-serif;
+
+color: #101828;
+margin-bottom: 16px;
+}
+
+.desP {
+	font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+}
+
+/* .genDiv {
+	background-image: url("https://ftp.goit.study/img/campers-test-task/2-1.webp");
+	height: 1000px;
+} */

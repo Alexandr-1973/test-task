@@ -97,15 +97,21 @@ gap: 8px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .elemLi {
   border-radius: 100px;
   padding: 12px 18px;
-  /* width: 126px; */
+  /* width: 160px; */
   height: 44px;
   background: #f2f4f7;
   mix-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .elemP {
@@ -154,4 +160,11 @@ color: #101828;
 .heartButton {
 	border: none;
 	background-color: inherit;
+  cursor: pointer;
+}
+
+.icon{
+  /* fill:#fff; */
+  stroke: rgba(16, 24, 40, 1);
+  fill:#fff;
 }

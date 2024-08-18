@@ -10,8 +10,13 @@
 }
 
 .nav-link {
-  color: black;
+  
   text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
 }
 
 .nav-link:hover {
@@ -21,4 +26,9 @@
 .active {
   color: red;
   text-decoration: none;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
 }

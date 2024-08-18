@@ -66,6 +66,12 @@ color: #101828;
 .closeButton {
   background-color: inherit;
   border: none;
+  cursor: pointer;
+}
+
+.closeIcon {
+  width: 32px;
+  height: 32px;
 }
 
 .imgDiv {
@@ -166,6 +172,7 @@ font-weight: 600;
 font-size: 20px;
 line-height: 1.2;
 color: #101828;
+cursor: pointer;;
 }
 
 .true {
@@ -176,4 +183,5 @@ height: 100%;
 
 .detailsDiv {
   display: flex;
+  gap: 24px;
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CamperCard from "../../components/CamperCard/CamperCard";
 import { useDispatch } from "react-redux";
 import { changeFilter } from "../../redux/filtersSlice";
+import css from "./FavoritePage.module.css"
 
 const FavoritePage = () => {
   const [favoriteCampers, setFavoriteCampers] = useState(() =>{
@@ -28,13 +29,13 @@ setFavoriteCampers(newFavoriteArray);
 
   return (
     // <p></p>
-    <ul>
+    <ul className={css.genUl}>
 {(!favoriteCampers || favoriteCampers.length===0) && <p>No favorite campers adverts</p>}
 {favoriteCampers && favoriteCampers.map((item)=>{
   return (
-<li key={item._id}>
+<li className={css.genLi}key={item._id}>
         <CamperCard item={item}/>
-        <button onClick={()=>handleClick(item._id)}>delete from favorite</button>
+        <button className={css.deleteBtn}onClick={()=>handleClick(item._id)}>Delete from favorite</button>
         </li>)}
   
   )}

@@ -5,6 +5,7 @@ import Features from "../Features/Features";
 import Reviews from "../Reviews/Reviews";
 import BookForm from "../BookForm/BookForm";
 import { useState } from "react";
+import { IoMdClose } from "react-icons/io";
 
 const DetailsModal = ({ isOpen, onClose, camperValue }) => {
   console.log(camperValue);
@@ -27,7 +28,8 @@ const DetailsModal = ({ isOpen, onClose, camperValue }) => {
           <div className={css.titleDiv}>
             <h3 className={css.title}>{name}</h3>
             <button className={css.closeButton} onClick={onClose}>
-              X
+            <IoMdClose className={css.closeIcon}/>
+              {/* X */}
             </button>
           </div>
           <div className={css.reviewsDiv}>

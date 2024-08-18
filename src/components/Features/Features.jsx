@@ -1,6 +1,8 @@
 import { renderElemArray } from "../../utils/utils";
 import css from "./Features.module.css";
 import { tableValues } from "../../utils/utils";
+import sprite from "../../images/sprite.svg"
+import { setIcon } from "../../utils/setIcon";
 
 const Features = ({ camperValue }) => {
   const elem = [
@@ -47,6 +49,9 @@ const Features = ({ camperValue }) => {
         {renderArray.map((item) => {
           return (
             <li key={renderArray.indexOf(item)} className={css.elemLi}>
+               <svg className={css.icon} width="15" height="16">
+            <use href={`${sprite}#${setIcon(item)}`}></use>
+          </svg>
               <p className={css.elemP}>{item}</p>
             </li>
           );
