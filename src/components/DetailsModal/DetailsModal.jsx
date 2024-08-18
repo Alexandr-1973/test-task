@@ -69,7 +69,7 @@ const DetailsModal = ({ isOpen, onClose, camperValue }) => {
         </ul>
         <div className={css.detailsDiv}>
         {isElement && <Features camperValue={camperValue}/>}
-        {!isElement && <Reviews />}
+        {!isElement && <Reviews camperValue={camperValue}/>}
         <BookForm />
         </div>
       </div>
