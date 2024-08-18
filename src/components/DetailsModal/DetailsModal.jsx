@@ -8,14 +8,13 @@ import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
 const DetailsModal = ({ isOpen, onClose, camperValue }) => {
-  console.log(camperValue);
+  
   const { name, rating, price, reviews, location, gallery, description } =
     camperValue;
 
   const [isElement, setIsElement] = useState(true);
 
   return (
-    // <div className={css["modal-div"]}>
     <Modal
       overlayClassName={css.overlay}
       isOpen={isOpen}
@@ -28,8 +27,7 @@ const DetailsModal = ({ isOpen, onClose, camperValue }) => {
           <div className={css.titleDiv}>
             <h3 className={css.title}>{name}</h3>
             <button className={css.closeButton} onClick={onClose}>
-            <IoMdClose className={css.closeIcon}/>
-              {/* X */}
+              <IoMdClose className={css.closeIcon} />
             </button>
           </div>
           <div className={css.reviewsDiv}>
@@ -51,12 +49,9 @@ const DetailsModal = ({ isOpen, onClose, camperValue }) => {
             })}
           </ul>
         </div>
-        {/* <div> */}
-        <p className={css.descriptionP}>{description}</p>
-        {/* </div> */}
 
-        {/* <div className={css.testdiv}>This is testdiv</div> */}
-        {/* <img src="" className={css.img} /> */}
+        <p className={css.descriptionP}>{description}</p>
+
         <ul className={css.togleUl}>
           <li className={css[`${isElement}`]}>
             <p className={css.elemP} onClick={() => setIsElement(true)}>
@@ -70,13 +65,12 @@ const DetailsModal = ({ isOpen, onClose, camperValue }) => {
           </li>
         </ul>
         <div className={css.detailsDiv}>
-        {isElement && <Features camperValue={camperValue}/>}
-        {!isElement && <Reviews camperValue={camperValue}/>}
-        <BookForm />
+          {isElement && <Features camperValue={camperValue} />}
+          {!isElement && <Reviews camperValue={camperValue} />}
+          <BookForm />
         </div>
       </div>
     </Modal>
-    // </div>
   );
 };
 

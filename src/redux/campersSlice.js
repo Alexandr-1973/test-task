@@ -1,15 +1,8 @@
-import {
-  createSlice,
-  isFulfilled,
-  // isPending,
-  isRejected,
-  // createSelector,
-} from "@reduxjs/toolkit";
-//   import { selectNameFilter } from "./filtersSlice";
+import { createSlice, isFulfilled, isRejected } from "@reduxjs/toolkit";
 
 const initialState = {
   items: [],
-  // loading: false,
+
   error: null,
 };
 
@@ -18,18 +11,14 @@ const campersSlice = createSlice({
   initialState: initialState,
   extraReducers: (builder) => {
     builder
-      // .addMatcher(isPending, (state) => {
-      //   state.loading = true;
-      // })
+
       .addMatcher(isFulfilled, (state, action) => {
-        //   state.loading = false;
-          state.error = null;
+        state.error = null;
         state.items = action.payload;
       })
-    .addMatcher(isRejected, (state, action) => {
-      // state.loading = false;
-      state.error = action.payload;
-    })
+      .addMatcher(isRejected, (state, action) => {
+        state.error = action.payload;
+      });
   },
 });
 

@@ -1,158 +1,129 @@
 .genDiv {
-	width: 360px;
+  width: 360px;
 }
 
 .location {
-	border-radius: 10px;
-padding: 18px 218px 18px 18px;
-width: 360px;
-height: 56px;
-background: #f7f7f7;
-border: none;
+  border-radius: 10px;
+  padding: 18px 218px 18px 18px;
+  width: 360px;
+  height: 56px;
+  background: #f7f7f7;
+  border: none;
 }
 
 .locationP {
-	font-family: "Inter", sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-color: rgba(16, 24, 40, 0.6);
-margin-bottom: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(16, 24, 40, 0.6);
+  margin-bottom: 8px;
 }
 
 .form {
-	display: flex;
-	flex-direction: column;
-	gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .formButton {
-	margin-top: 32px;
-	border-radius: 200px;
-padding: 16px 60px;
-width: 173px;
-height: 56px;
-background: #e44848;
-font-family: "Inter", sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: -0.01em;
-color: #fff;
-cursor: pointer;
-border: none;
+  margin-top: 32px;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 173px;
+  height: 56px;
+  background: #e44848;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  cursor: pointer;
+  border: none;
 }
 
 .filtersP {
-	font-family: "Inter", sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-color: #475467;
-margin-bottom: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  margin-bottom: 14px;
 }
 
 .equipmentH {
-	font-family: "Inter", sans-serif;
-font-weight: 600;
-font-size: 20px;
-line-height: 1.2;
-color: #101828;
-margin-bottom: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 24px;
 }
 
 .equipmentTypeH {
-	font-family: "Inter", sans-serif;
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-	color: #101828;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
 }
 
 .checkBoxUl {
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
-border-top: 1px solid rgba(16, 24, 40, 0.2);
-padding-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid rgba(16, 24, 40, 0.2);
+  padding-top: 24px;
 }
 
 .radioUl {
-	border-top: 1px solid rgba(16, 24, 40, 0.2);
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
-	padding-top: 24px;
+  border-top: 1px solid rgba(16, 24, 40, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 24px;
 }
-
-
-
-
 
 .customCheckBox {
-	display: none;}
-
-
-  .radioLabel {
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid rgba(16, 24, 40, 0.2);
-	border-radius: 10px;
-	padding: 17px 30px;
-	width: 100px;
-	height: 95px;
-  cursor: pointer;
-  padding: 0;
-
-
-	/* display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid rgba(16, 24, 40, 0.2);
-border-radius: 10px;
-/* padding: 17px 30px; */
-/* width: 100px; */
-/* height: 95px;
-mix-blend-mode: multiply;
-font-family: "Inter", sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.25;
-text-align: center;
-color: #101828; */
+  display: none;
 }
 
-/* .customCheckBox:checked+label{
-    border-color: #0b76ef;
-    background-color: #0b76ef;
-   
-  } */
+.radioLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  padding: 17px 30px;
+  width: 100px;
+  height: 95px;
+  cursor: pointer;
+  padding: 0;
+}
+
 .span {
-	height: 100%;
-	width: 100%;
-	/* padding: 10px 20px; */
+  height: 100%;
+  width: 100%;
+
   border: none;
   border-radius: 9px;
   display: flex;
   flex-direction: column;
-  
-text-align: center;
+
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
 }
-  .customCheckBox:checked + .span {
-	background-color: #007BFF;
-	color: white;
-	border-color: #007BFF;
-	
-  }
-
-  .icon {
-	stroke: rgba(16, 24, 40, 1);
-  fill:#fff;
+.customCheckBox:checked + .span {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
 }
-  
+
+.icon {
+  stroke: rgba(16, 24, 40, 1);
+  fill: #fff;
+}

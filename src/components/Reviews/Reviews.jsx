@@ -4,7 +4,6 @@ import css from "./Reviews.module.css";
 const Reviews = ({ camperValue }) => {
   const keyArray = [1, 2, 3, 4, 5];
 
-  // const {}=camperValue
   return (
     <ul className={css.genUl}>
       {camperValue.reviews.map((item) => {
@@ -16,21 +15,24 @@ const Reviews = ({ camperValue }) => {
                 <h4 className={css.name}>{item.reviewer_name}</h4>
                 <ul className={css.starUl}>
                   {keyArray.map((num) => {
-					return (<li key={keyArray.indexOf(num)}>
-						<FaStar className={
-						css[
-						  `${num <= item.reviewer_rating ? "yellow" : "gray"}`
-						]
-					  }/>
-						
-					
-				  </li>);
+                    return (
+                      <li key={keyArray.indexOf(num)}>
+                        <FaStar
+                          className={
+                            css[
+                              `${
+                                num <= item.reviewer_rating ? "yellow" : "gray"
+                              }`
+                            ]
+                          }
+                        />
+                      </li>
+                    );
                   })}
                 </ul>
-                
               </div>
             </div>
-			<p className={css.comment}>{item.comment}</p>
+            <p className={css.comment}>{item.comment}</p>
           </li>
         );
       })}

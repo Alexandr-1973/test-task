@@ -1,26 +1,18 @@
 import { useDispatch } from "react-redux";
 import { changeFilter } from "../../redux/filtersSlice";
 import { useEffect } from "react";
-import css from "./HomePage.module.css"
-
-
+import css from "./HomePage.module.css";
 
 const HomePage = () => {
-
   const dispatch = useDispatch();
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(changeFilter({}));
-  },[dispatch])
+  }, [dispatch]);
 
   return (
     <div className={css.genDiv}>
       <div>
-        <img
-        //   src=
-        //   alt="Actor's photo"
-        //   className={css.img}
-        />
         <h2 className={css.title}>Campervan and RV Rental</h2>
         <p className={css.desP}>
           Campervanning is popular throughout the world! Our site is the perfect
@@ -34,11 +26,6 @@ const HomePage = () => {
         </p>
       </div>
       <div>
-        <img
-        //   src=
-        //   alt="Actor's photo"
-        //   className={css.img}
-        />
         <h2 className={css.title}>Become a host</h2>
         <p className={css.desP}>
           Have you considered earning money when you do not use your RV? List

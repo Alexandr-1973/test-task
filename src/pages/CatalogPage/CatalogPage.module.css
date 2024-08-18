@@ -7,7 +7,7 @@
 .cardDiv {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+
   align-items: center;
   gap: 50px;
 }
@@ -20,15 +20,14 @@
 
 .moreButton {
   border: 1px solid rgba(71, 84, 103, 0.2);
-border-radius: 200px;
-padding: 16px 32px;
-width: 145px;
-height: 56px;
-font-family: "Inter", sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: -0.01em;
-color: #101828;
-/* margin-top: 50px; */
+  border-radius: 200px;
+  padding: 16px 32px;
+  width: 145px;
+  height: 56px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #101828;
 }

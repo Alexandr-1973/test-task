@@ -68,8 +68,7 @@ export const filtersObject = (filtersArray) => {
   return paramsObject;
 };
 
-
-export const renderElemArray = (elem,item) => {
+export const renderElemArray = (elem, item) => {
   let array = [];
   for (let i = 0; i < elem.length; i += 1) {
     if (
